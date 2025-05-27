@@ -76,9 +76,7 @@
       background: linear-gradient(270deg, #10101A, #1A1A2E, #10101A);
       background-size: 600% 600%;
       animation: backgroundPan 15s ease infinite;
-      /* cursor: none; Removed for default cursor */
     }
-    /* Removed .neon-cursor and .neon-cursor-pointer styles */
 
     ::-webkit-scrollbar {
       width: 10px;
@@ -146,19 +144,19 @@
 <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.1.0/",
     "react": "https://esm.sh/react@^19.1.0",
     "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.1"
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.1",
+    "vite": "https://esm.sh/vite@^6.3.5",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^4.5.0"
   }
 }
 </script>
 </head>
 <body class="font-sans text-light-primary">
   <div id="root"></div>
-  <!-- Removed neon cursor divs -->
-  <script type="module" src="/index.mjs"></script>
-  <!-- Removed neon cursor script -->
+  <script type="module" src="./index.tsx"></script>
 </body>
 </html><link rel="stylesheet" href="index.css">
 <script src="index.tsx" type="module"></script>
