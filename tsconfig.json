@@ -14,8 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "." // Assuming all paths are relative to the root or explicitly specified
+    "jsx": "react-jsx"
+    // "baseUrl": "." was removed
   },
   "include": [
     "vite.config.ts",
@@ -26,7 +26,6 @@
     "components/**/*.tsx",
     "pages/**/*.tsx",
     "utils/**/*.ts"
-    // Add other specific paths if necessary, e.g., "src" if you move files there
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
