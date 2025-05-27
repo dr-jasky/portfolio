@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Jaskirat Singh, Ph.D. | Neon Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-primary': '#10101A', 
+            'dark-secondary': '#1A1A2E', 
+            'dark-tertiary': '#2A2A3E', // Slightly lighter for depth
+            'neon-blue': '#00FFFF',   
+            'neon-pink': '#FF00FF',   
+            'neon-green': '#39FF14',  
+            'light-primary': '#EAEAEA', 
+            'light-secondary': '#B0B0B0',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'neon-blue': '0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF',
+            'neon-pink': '0 0 5px #FF00FF, 0 0 10px #FF00FF, 0 0 15px #FF00FF',
+            'neon-green': '0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #39FF14',
+            'neon-glow-blue': '0 0 8px rgba(0, 255, 255, 0.7), 0 0 12px rgba(0, 255, 255, 0.5)',
+            'neon-glow-pink': '0 0 8px rgba(255, 0, 255, 0.7), 0 0 12px rgba(255, 0, 255, 0.5)',
+            'neon-glow-green': '0 0 8px rgba(57, 255, 20, 0.7), 0 0 12px rgba(57, 255, 20, 0.5)',
+          },
+           animation: {
+            fadeIn: 'fadeIn 0.5s ease-out forwards',
+            slideUp: 'slideUp 0.5s ease-out forwards',
+            pulseGlow: 'pulseGlow 2s infinite ease-in-out',
+            scaleIn: 'scaleInHorizontal 0.5s 0.2s ease-out forwards',
+            backgroundPan: 'backgroundPan 15s linear infinite',
+            subtleFloat: 'subtleFloat 3s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0, transform: 'translateY(10px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+            slideUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 5px var(--tw-shadow-color), 0 0 10px var(--tw-shadow-color)' },
+              '50%': { boxShadow: '0 0 10px var(--tw-shadow-color), 0 0 20px var(--tw-shadow-color)' },
+            },
+            scaleInHorizontal: { 
+              'from': { transform: 'translateX(-50%) scaleX(0)' },
+              'to': { transform: 'translateX(-50%) scaleX(1)' },
+            },
+            backgroundPan: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' },
+            },
+            subtleFloat: {
+              '0%': { transform: 'translateY(0px)' },
+              '100%': { transform: 'translateY(-5px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(270deg, #10101A, #1A1A2E, #10101A);
+      background-size: 600% 600%;
+      animation: backgroundPan 15s ease infinite;
+      /* cursor: none; Removed for default cursor */
+    }
+    /* Removed .neon-cursor and .neon-cursor-pointer styles */
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1A1A2E; 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #00FFFF;
+      border-radius: 5px;
+      border: 2px solid #1A1A2E;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF00FF;
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    .animate-scaleIn {
+      animation: scaleInHorizontal 0.5s 0.2s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scaleInHorizontal {
+      from { opacity: 0; transform: translateX(-50%) scaleX(0); }
+      to { opacity: 1; transform: translateX(-50%) scaleX(1); }
+    }
+    @keyframes backgroundPan {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--neon-blue);
+      color: var(--dark-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue);
+    }
+    .scroll-to-top:hover {
+      background-color: var(--neon-pink);
+      box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+      transform: scale(1.1);
+    }
+    .scroll-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.1"
+  }
+}
+</script>
+</head>
+<body class="font-sans text-light-primary">
+  <div id="root"></div>
+  <!-- Removed neon cursor divs -->
+  <script type="module" src="/index.mjs"></script>
+  <!-- Removed neon cursor script -->
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
