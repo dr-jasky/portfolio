@@ -25,14 +25,14 @@
     "types.ts",
     "components/**/*.tsx",
     "utils/**/*.ts",
-    "HomePage.tsx",
-    "AboutPage.tsx",
-    "ResearchPage.tsx",
-    "ExperiencePage.tsx",
-    "EducationPage.tsx",
-    "SkillsPage.tsx",
-    "ConsultancyPage.tsx",
-    "ContactPage.tsx"
+    "pages/HomePage.tsx",
+    "pages/AboutPage.tsx",
+    "pages/ResearchPage.tsx",
+    "pages/ExperiencePage.tsx",
+    "pages/EducationPage.tsx",
+    "pages/SkillsPage.tsx",
+    "pages/ConsultancyPage.tsx",
+    "pages/ContactPage.tsx"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
