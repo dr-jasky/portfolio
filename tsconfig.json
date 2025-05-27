@@ -1,3 +1,4 @@
+
 {
   "compilerOptions": {
     "target": "ESNext",
@@ -15,7 +16,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
-    // "baseUrl": "." was removed
   },
   "include": [
     "vite.config.ts",
@@ -24,8 +24,15 @@
     "data.ts",
     "types.ts",
     "components/**/*.tsx",
-    "pages/**/*.tsx",
-    "utils/**/*.ts"
+    "utils/**/*.ts",
+    "HomePage.tsx",
+    "AboutPage.tsx",
+    "ResearchPage.tsx",
+    "ExperiencePage.tsx",
+    "EducationPage.tsx",
+    "SkillsPage.tsx",
+    "ConsultancyPage.tsx",
+    "ContactPage.tsx"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

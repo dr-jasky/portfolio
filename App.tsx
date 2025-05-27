@@ -1,15 +1,16 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, NavLink as RouterNavLink, useLocation } from 'react-router-dom';
 import { personalInfoData, navLinksData, contactLinksData } from './data';
-import { HomePage } from './pages/HomePage';
-import { AboutPage } from './pages/AboutPage';
-import { ResearchPage } from './pages/ResearchPage';
-import { ExperiencePage } from './pages/ExperiencePage';
-import { EducationPage } from './pages/EducationPage';
-import { SkillsPage } from './pages/SkillsPage';
-import { ContactPage } from './pages/ContactPage';
-import { ConsultancyPage } from './pages/ConsultancyPage';
+import { HomePage } from './HomePage';
+import { AboutPage } from './AboutPage';
+import { ResearchPage } from './ResearchPage';
+import { ExperiencePage } from './ExperiencePage';
+import { EducationPage } from './EducationPage';
+import { SkillsPage } from './SkillsPage';
+import { ContactPage } from './ContactPage';
+import { ConsultancyPage } from './ConsultancyPage';
 import { NavLink } from './types';
 
 const Header: React.FC = () => {
