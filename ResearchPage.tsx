@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect, useMemo } from 'react';
 import { publicationsData } from './data';
 import { Publication, PublicationType, ImpactMetric } from './types';

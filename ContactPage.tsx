@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import { personalInfoData, contactLinksData } from './data';
 import { Section } from './components/Section';
