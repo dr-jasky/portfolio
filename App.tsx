@@ -11,7 +11,7 @@ import { EducationPage } from './EducationPage';
 import { SkillsPage } from './SkillsPage';
 import { ContactPage } from './ContactPage';
 import { ConsultancyPage } from './ConsultancyPage';
-import { NavLink } from './types';
+import { NavLink as NavLinkType } from './types';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           </RouterNavLink>
           
           <nav className="hidden md:flex space-x-1 lg:space-x-2">
-            {navLinksData.map((link: NavLink) => (
+            {navLinksData.map((link: NavLinkType) => (
               <RouterNavLink
                 key={link.id}
                 to={link.path}
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-dark-secondary/95 backdrop-blur-sm shadow-xl z-40 border-t border-neon-blue/20">
           <nav className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinksData.map((link: NavLink) => (
+            {navLinksData.map((link: NavLinkType) => (
               <RouterNavLink
                 key={link.id}
                 to={link.path}
